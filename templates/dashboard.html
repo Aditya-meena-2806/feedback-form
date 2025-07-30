@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback Dashboard</title>
+  <link rel="stylesheet" href="/static/dashboard.css" />
+</head>
+<body>
+  <h2>Feedback Submissions</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Name</th>
+        <th>Feedback</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for fb in feedbacks %}
+        <tr>
+          <td>{{ fb[4] }}</td>
+          <td>{{ fb[1] }}</td>
+          <td>{{ fb[2] }}</td>
+          <td>{{ fb[3] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
